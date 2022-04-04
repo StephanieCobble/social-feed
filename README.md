@@ -1,14 +1,23 @@
 # social-feed
 USER STORIES
 • As a developer, I want to make at least 7 good, consistent commits.
+
 • As a developer, I want to use the Create-React-App to create my React project.
+
 • As a developer, I want to display all posts (name, body, & liked status) within a feed on the main page.
+
 • As a developer, I want to create “like” and “dislike” buttons so that I can visually show & toggle between “liking” and “disliking” a post.
+
 • As a developer, I want to create a form on a separate component so that I can add a new post to the main feed.
+
 • As a developer, I want to create a minimum of three React components and use them within my application (EX: CreatePost, DisplayPosts, Post, NavBar)
+
 • As a developer, I want to have an aesthetically pleasing user interface to ensure a great user experience
+
 BONUS:
+
 • As a developer, I want to add a date to all posts and post creations. (there’s a diff b/t dateTime, and date)
+
 -----------------------------------------
 The goal of the Social Feed project is to become more familiar with React.js, and to develop a greater understanding of how components interact, how props allow components to pass values and functions between each other, and how multiple components can come together to create an interactive frontend application with read & write functionality.
 
