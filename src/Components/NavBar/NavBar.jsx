@@ -3,7 +3,7 @@ import React from 'react';
 
 const NavBar = (props) => {
     return(
-        <div className='navbar'>
+        <div>
             <h3>Social<small>Feed</small></h3>
         </div>
     );

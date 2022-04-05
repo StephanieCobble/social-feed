@@ -8,7 +8,7 @@
 
 
 import React from "react";
-// import LikeDislike from '../LikeDislike/LikeDislike';
+import LikeDislike from '../LikeDislike/LikeDislike';
 
 const Post = (props) => {
   return (
@@ -16,7 +16,7 @@ const Post = (props) => {
       <div>
         <h3>{props.post.name}</h3>
         <p>{props.post.post}</p>
-        {/* <LikeDislike /> */}
+        <LikeDislike post={props.post}/>
       </div>
     </div>
   );

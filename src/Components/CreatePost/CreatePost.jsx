@@ -26,6 +26,7 @@ function handleSubmit(event) {
     return ( 
         <form onSubmit={handleSubmit} >
             <div>
+            <div>
                 <label>Name</label>
                 <input type='text' value={name} onChange={(event) => setName(event.target.value)}/>
             </div>
@@ -34,6 +35,7 @@ function handleSubmit(event) {
                 <input type='text' value={post} onChange={(event) => setPost(event.target.value)}/>
             </div>
             <button type='submit'>Create</button>
+            </div>
         </form>
      );
 }

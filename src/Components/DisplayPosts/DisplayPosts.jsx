@@ -8,10 +8,11 @@ import Post from '../Post/Post';
 
 const DisplayPosts = (props) => {
     return ( 
-          props.posts.map((post) => 
-            <div>
-            <Post post={post} />
-            </div>
-    ));
+        props.posts.map((post) => 
+          <div>
+          <Post post={post}/>
+          </div>
+        )
+    );
 } 
 export default DisplayPosts;
