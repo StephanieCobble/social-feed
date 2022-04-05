@@ -18,20 +18,22 @@ function handleSubmit(event) {
         name: name,
         post: post
     };
-    props.addNewPost(newPost)
+    props.addNewPost(newPost);
+    setName('');
+    setPost('');
 }
 
     return ( 
         <form onSubmit={handleSubmit} >
             <div>
                 <label>Name</label>
-                <input type='name' value={name} onChange={(event) => setName(event.target.value)}/>
+                <input type='text' value={name} onChange={(event) => setName(event.target.value)}/>
             </div>
             <div>
                 <label>Post</label>
-                <input type='post' value={post} onChange={(event) => setPost(event.target.value)}/>
+                <input type='text' value={post} onChange={(event) => setPost(event.target.value)}/>
             </div>
-            <button type='submit' className='btn btn-primary'>Create</button>
+            <button type='submit'>Create</button>
         </form>
      );
 }
