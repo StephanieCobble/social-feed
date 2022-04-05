@@ -8,7 +8,7 @@
 
 
 import React from "react";
-// import LikeDislikePost from '../LikeDislike/LikeDislike';
+// import LikeDislike from '../LikeDislike/LikeDislike';
 
 const Post = (props) => {
   return (

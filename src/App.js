@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import CreatePost from './Components/CreatePost/CreatePost';
 import DisplayPosts from './Components/DisplayPosts/DisplayPosts';
 import Post from './Components/Post/Post'
-import './App.css'
 import NavBar from './Components/NavBar/NavBar';
 
 
@@ -20,7 +19,7 @@ const [posts, setPosts] = useState([
   }
 
   return (
-    <div className='all-container'>
+    <div>
       <CreatePost addNewPostProp={addNewPost}/>
       <DisplayPosts parentPost={posts}/>
       <Post />
