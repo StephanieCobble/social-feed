@@ -1,0 +1,51 @@
+.all-font-container {
+    font-family: fantasy;
+}
+
+.post-container {
+    background-color: thistle;
+    padding-top: 1em;
+}
+
+.location-container {
+    display: block;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 4em;
+}
+
+.nav-bar {
+    margin: 1em;
+}
+
+.small-nav-bar {
+    color: darkgray;
+    font-size: small;
+}
+
+.post {
+    background-color: rgb(214, 198, 229);
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(75, 63, 81, 0.661);
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 1.5em;
+    padding: 1em;
+}
+
+.bottom-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-wrap {
+    display: flex;
+    justify-content: right;
+}
+
+.button-image {
+    height: 100%;
+}
+
+
+

@@ -1,9 +1,10 @@
 //parent file
 
-import React, { useState } from "react";
-import CreatePost from "./Components/CreatePost/CreatePost";
-import DisplayPosts from "./Components/DisplayPosts/DisplayPosts";
-import NavBar from "./Components/NavBar/NavBar";
+import React, { useState } from 'react';
+import NavBar from './Components/NavBar/NavBar';
+import CreatePost from './Components/CreatePost/CreatePost';
+import DisplayPosts from './Components/DisplayPosts/DisplayPosts';
+import './App.css';
 
 function App() {
   const [posts, setPosts] = useState([
@@ -27,11 +28,11 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='all-container'>
       <NavBar />
-      <div>
+      <div className='content-container'>
         <CreatePost addNewPostProp={addNewPost} />
-        <div>
+        <div className="location-container">
           <DisplayPosts parentPost={posts} />
         </div>
       </div>
