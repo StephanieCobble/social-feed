@@ -9,20 +9,21 @@
 .navbar h3 {
     font-weight: normal;
     font-size: 2em;
+    font-family: fantasy;
 }
 
 .navbar small {
-    color: gray;
+    color: rgb(124, 120, 124);
     font-size: 1em;
 }
 
 .content-container {
-    background-color: rgb(226, 242, 238);
+    background-color: rgb(238, 226, 242);
     padding-top: 1em;
 }
 
 .form-container {
-    background-color: white;
+    background-color: rgb(252, 252, 252);
     padding: 2em;
     display: block;
     align-items: center;
@@ -30,7 +31,7 @@
     margin-right: 25%;
     margin-left: 25%;
     border-radius: 10px;
-    box-shadow: 10px 5px 5px lightgray;
+    box-shadow: 10px 5px 5px rgba(116, 60, 153, 0.513);
 }
 
 .form-group {
@@ -45,38 +46,13 @@
 }
 
 .post {
-    background-color: white;
+    background-color: rgb(252, 252, 252);
     border-radius: 10px;
-    box-shadow: 10px 5px 5px lightgray;
+    box-shadow: 10px 5px 5px rgba(116, 60, 153, 0.513);
     margin-right: 25%;
     margin-left: 25%;
     margin-top: 1.5em;
     padding: 1em;
 }
-
-.bottom-content-holder {
-    display: flex;
-    justify-content: space-between;
-}
-
-.date {
-    margin-top: 1em;
-    font-size: small;
-    font-style: italic;
-}
-
-.button-wrapper {
-    display: flex;
-    justify-content: right;
-}
-
-.button-wrapper button {
-    margin: .5em;
-}
-
-.button-img img {
-    height: 100%;
-}
-
 
 

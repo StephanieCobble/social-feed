@@ -6,11 +6,15 @@
 
 import React, { useState, useEffect } from 'react';
 import './LikeDislike.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 const LikeDislike = (props) => {
   const [likeSelected, setLikeSelected] = useState(false);
-  const [likeClass, setLikeClass] = useState('inactive');
-  const [dislikeClass, setDislikeClass] = useState('inactive');
+  const [dislikeSelected, setDislikeSelected] = useState(false);
+  const [likeClass, setLikeClass] = useState('like-inactive');
+  const [dislikeClass, setDislikeClass] = useState('dislike-inactive');
 
   function handleLike() {
     if (props.post.like === false){
@@ -26,41 +30,51 @@ const LikeDislike = (props) => {
   function handleDislike() {
     if (props.post.dislike === false){
       props.post.dislike = true;
-      // setLikeSelected(true);
+      setDislikeSelected(true);
       props.post.like = false;
     } else {
       props.post.dislike = false;
-      // setLikeSelected(false);
+      setDislikeSelected(false);
     }
   }
 
   useEffect(() => {
     if (props.post.like === false){
-      setLikeClass('inactive');
+      setLikeClass('like-inactive');
     } else {
-      setLikeClass('active');
+      setLikeClass('like-active');
     }
   }, [likeSelected]);
 
   useEffect(() => {
     if (props.post.dislike === false){
-      setDislikeClass('inactive');
+      setDislikeClass('dislike-inactive');
     } else {
-      setDislikeClass('active');
+      setDislikeClass('dislike-active');
     }
-  }, [props.post.dislike]);
-  debugger;
+  }, [dislikeSelected]);
+ 
 
+  // const ThumbsUp = () => (
+  //   <div>
+  //     <FontAwesomeIcon icon='fa-solid fa-thumbs-up' style='color:#0fd236' />
+  //   </div>
+  // )
+
+  library.add(faThumbsUp, faThumbsDown)
+  
   return (
-    <div className="button-wrap">
-      <div className='button-image'>
-        <button className={likeClass} onClick={handleLike}>
-          Like
+   
+    <div className="rating">
+      <div>
+        <button  className={likeClass} onClick={handleLike}>
+        <FontAwesomeIcon color='#525753' icon={['fa-solid', 'fa-thumbs-up']} />
         </button>
       </div>
+      
       <div>
-        <button className={dislikeClass} onClick={handleDislike}>
-          Dislike
+        <button  className={dislikeClass} onClick={handleDislike}>
+        <FontAwesomeIcon color='#525753' icon={['fa-solid', 'fa-thumbs-down']} />
         </button>
       </div>
     </div>
