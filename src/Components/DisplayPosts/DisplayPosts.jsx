@@ -8,8 +8,8 @@ import Post from "../Post/Post";
 import LikeDislike from "../LikeDislike/LikeDislike";
 
 const DisplayPosts = (props) => {
-  return ( 
-      props.posts.map((post) => 
+  return (
+      props.parentPost.map((post) => 
           <div>
               <Post post={post}/>
           </div>
@@ -18,3 +18,4 @@ const DisplayPosts = (props) => {
 }
 
 export default DisplayPosts;
+

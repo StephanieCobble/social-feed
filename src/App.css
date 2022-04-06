@@ -1,49 +1,80 @@
-.all-font-container {
-    font-family: fantasy;
+.all-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.post-container {
-    background-color: thistle;
+.navbar {
+    margin: 1em;
+}
+
+.navbar h3 {
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.navbar small {
+    color: gray;
+    font-size: 1em;
+}
+
+.content-container {
+    background-color: rgb(226, 242, 238);
     padding-top: 1em;
 }
 
-.location-container {
+.form-container {
+    background-color: white;
+    padding: 2em;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25%;
+    margin-left: 25%;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px lightgray;
+}
+
+.form-group {
+    margin: 1em;
+}
+
+.post-container {
     display: block;
     justify-content: center;
     padding-top: 1em;
     padding-bottom: 4em;
 }
 
-.nav-bar {
-    margin: 1em;
-}
-
-.small-nav-bar {
-    color: darkgray;
-    font-size: small;
-}
-
 .post {
-    background-color: rgb(214, 198, 229);
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 10px 5px 5px rgba(75, 63, 81, 0.661);
+    box-shadow: 10px 5px 5px lightgray;
     margin-right: 25%;
     margin-left: 25%;
     margin-top: 1.5em;
     padding: 1em;
 }
 
-.bottom-content {
+.bottom-content-holder {
     display: flex;
     justify-content: space-between;
 }
 
-.button-wrap {
+.date {
+    margin-top: 1em;
+    font-size: small;
+    font-style: italic;
+}
+
+.button-wrapper {
     display: flex;
     justify-content: right;
 }
 
-.button-image {
+.button-wrapper button {
+    margin: .5em;
+}
+
+.button-img img {
     height: 100%;
 }
 

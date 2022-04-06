@@ -6,7 +6,6 @@
 
 import React, { useState, useEffect } from 'react';
 import './LikeDislike.css';
-import './../../App.css';
 
 const LikeDislike = (props) => {
   const [likeSelected, setLikeSelected] = useState(false);
@@ -14,7 +13,7 @@ const LikeDislike = (props) => {
   const [dislikeClass, setDislikeClass] = useState('inactive');
 
   function handleLike() {
-    if (props.post.like === false) {
+    if (props.post.like === false){
       props.post.like = true;
       setLikeSelected(true);
       props.post.dislike = false;
@@ -25,7 +24,7 @@ const LikeDislike = (props) => {
   }
 
   function handleDislike() {
-    if (props.post.dislike === false) {
+    if (props.post.dislike === false){
       props.post.dislike = true;
       // setLikeSelected(true);
       props.post.like = false;
@@ -36,7 +35,7 @@ const LikeDislike = (props) => {
   }
 
   useEffect(() => {
-    if (props.post.like === false) {
+    if (props.post.like === false){
       setLikeClass('inactive');
     } else {
       setLikeClass('active');
@@ -44,7 +43,7 @@ const LikeDislike = (props) => {
   }, [likeSelected]);
 
   useEffect(() => {
-    if (props.post.dislike === false) {
+    if (props.post.dislike === false){
       setDislikeClass('inactive');
     } else {
       setDislikeClass('active');

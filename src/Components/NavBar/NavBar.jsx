@@ -4,7 +4,7 @@ import './../../App.css';
 
 const NavBar = (props) => {
   return (
-    <div className='nav-bar'>
+    <div className='navbar'>
       <h3>
         Social<small>Feed</small>
       </h3>

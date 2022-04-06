@@ -41,7 +41,7 @@ const CreatePost = (props) => {
           <div className="col-sm-10">
             <input
               className="form-control"
-              type="text"
+              type='text'
               value={post}
               onChange={(event) => setPost(event.target.value)}
             />

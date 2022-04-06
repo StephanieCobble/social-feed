@@ -9,8 +9,8 @@ import './App.css';
 function App() {
   const [posts, setPosts] = useState([
     {
-      name: "Stephanie Cobble",
-      post: "Its almost Easter!",
+      name: 'Stephanie Cobble',
+      post: 'Its almost Easter!',
       like: false,
       dislike: false,
     },
@@ -31,9 +31,9 @@ function App() {
     <div className='all-container'>
       <NavBar />
       <div className='content-container'>
-        <CreatePost addNewPostProp={addNewPost} />
-        <div className="location-container">
-          <DisplayPosts parentPost={posts} />
+        <CreatePost addNewPost={addNewPost}/>
+        <div className="post-container">
+          <DisplayPosts parentPost={posts}/>
         </div>
       </div>
     </div>
