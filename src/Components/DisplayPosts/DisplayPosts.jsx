@@ -5,7 +5,7 @@
 
 import React from "react";
 import Post from "../Post/Post";
-import LikeDislike from "../LikeDislike/LikeDislike";
+
 
 const DisplayPosts = (props) => {
   return (

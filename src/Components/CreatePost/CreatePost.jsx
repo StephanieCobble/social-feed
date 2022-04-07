@@ -29,7 +29,7 @@ const CreatePost = (props) => {
           <label className="col-sm-2 col-form-label">Name</label>
           <div className="col-sm-10">
             <input
-              className="form-control"
+              className="name-control"
               type="text"
               value={name}
               onChange={(event) => setName(event.target.value)}
@@ -39,16 +39,16 @@ const CreatePost = (props) => {
         <div className="form-group row">
           <label className="col-sm-2 col-form-label">Post</label>
           <div className="col-sm-10">
-            <input
-              className="form-control"
+            <textarea
+              className="post-control"
               type='text'
               value={post}
               onChange={(event) => setPost(event.target.value)}
             />
           </div>
         </div>
-        <div className="col-auto">
-          <button className="btn btn-primary" type="submit">
+        <div >
+          <button color='white' className='create' type="submit">
             Create
           </button>
         </div>

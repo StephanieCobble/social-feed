@@ -4,56 +4,51 @@
 //functions, start to lay out the steps that need to occur when each button is clicked. (a data
 //type that has two states (T/F))
 
-import React, { useState, useEffect } from 'react';
-import './LikeDislike.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import React, { useState, useEffect } from "react";
+import "./LikeDislike.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 
 const LikeDislike = (props) => {
   const [likeSelected, setLikeSelected] = useState(false);
   const [dislikeSelected, setDislikeSelected] = useState(false);
-  const [likeClass, setLikeClass] = useState('like-inactive');
-  const [dislikeClass, setDislikeClass] = useState('dislike-inactive');
+  const [likeClass, setLikeClass] = useState("like-inactive");
+  const [dislikeClass, setDislikeClass] = useState("dislike-inactive");
 
-  function handleLike() {
-    if (props.post.like === false){
-      props.post.like = true;
-      setLikeSelected(true);
-      props.post.dislike = false;
-    } else {
-      props.post.like = false;
+  const handleLike = () => {
+    if (likeSelected) {
       setLikeSelected(false);
-    }
-  }
-
-  function handleDislike() {
-    if (props.post.dislike === false){
-      props.post.dislike = true;
-      setDislikeSelected(true);
-      props.post.like = false;
     } else {
-      props.post.dislike = false;
+      setLikeSelected(true);
       setDislikeSelected(false);
     }
-  }
+  };
+
+  const handleDislike = () => {
+    if (dislikeSelected) {
+      setDislikeSelected(false);
+    } else {
+      setDislikeSelected(true);
+      setLikeSelected(false);
+    }
+  };
 
   useEffect(() => {
-    if (props.post.like === false){
-      setLikeClass('like-inactive');
-    } else {
-      setLikeClass('like-active');
+    if (likeSelected === true) {
+      setLikeClass("like-active");
+    } else if (likeSelected === false) {
+      setLikeClass("like-inactive");
     }
   }, [likeSelected]);
 
   useEffect(() => {
-    if (props.post.dislike === false){
-      setDislikeClass('dislike-inactive');
-    } else {
-      setDislikeClass('dislike-active');
+    if (dislikeSelected === true) {
+      setDislikeClass("dislike-active");
+    } else if (dislikeSelected === false) {
+      setDislikeClass("dislike-inactive");
     }
   }, [dislikeSelected]);
- 
 
   // const ThumbsUp = () => (
   //   <div>
@@ -61,20 +56,25 @@ const LikeDislike = (props) => {
   //   </div>
   // )
 
-  library.add(faThumbsUp, faThumbsDown)
-  
+  library.add(faThumbsUp, faThumbsDown);
+
   return (
-   
     <div className="rating">
       <div>
-        <button  className={likeClass} onClick={handleLike}>
-        <FontAwesomeIcon color='#525753' icon={['fa-solid', 'fa-thumbs-up']} />
+        <button className={likeClass} onClick={handleLike}>
+          <FontAwesomeIcon
+            color="#525753"
+            icon={["fa-solid", "fa-thumbs-up"]}
+          />
         </button>
       </div>
-      
+
       <div>
-        <button  className={dislikeClass} onClick={handleDislike}>
-        <FontAwesomeIcon color='#525753' icon={['fa-solid', 'fa-thumbs-down']} />
+        <button className={dislikeClass} onClick={handleDislike}>
+          <FontAwesomeIcon
+            color="#525753"
+            icon={["fa-solid", "fa-thumbs-down"]}
+          />
         </button>
       </div>
     </div>

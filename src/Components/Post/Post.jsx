@@ -1,7 +1,7 @@
 //create a template of how you would like each individual post to be
 //displayed. This will include the user’s name, the body of the post, and the “like” and “dislike” buttons.
 
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import LikeDislike from '../LikeDislike/LikeDislike';
 
 

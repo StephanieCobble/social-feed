@@ -25,13 +25,27 @@
 .form-container {
     background-color: rgb(252, 252, 252);
     padding: 2em;
+    padding-bottom: 3em;
     display: block;
-    align-items: center;
-    justify-content: center;
     margin-right: 25%;
     margin-left: 25%;
     border-radius: 10px;
     box-shadow: 10px 5px 5px rgba(116, 60, 153, 0.513);
+}
+
+.name-control{
+    display:inline-block;
+    max-width: 100%;
+    padding-right: 65%;
+    border-radius: .5em;
+}
+
+.post-control {
+    /* display: flex; */
+    display:inline-block;
+    max-width: 100%;
+    padding-right: 65%;
+    border-radius: .5em;
 }
 
 .form-group {
@@ -51,8 +65,18 @@
     box-shadow: 10px 5px 5px rgba(116, 60, 153, 0.513);
     margin-right: 25%;
     margin-left: 25%;
-    margin-top: 1.5em;
+    margin-top: .03em;
     padding: 1em;
+    border-bottom-color: black;
+    border-bottom-width: 10%;
+    border-bottom-style: solid;
 }
 
+.create {
+    border-radius: 5em;
+    background-color: rgb(24, 103, 171);
+    color: white;
+    float: right;
+    margin-bottom: 5em;    
+}
 
